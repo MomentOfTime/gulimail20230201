@@ -23,8 +23,9 @@
 		<module>gulimail-ware</module>
 		<module>renren-fast</module>
 		<module>renren-generator</module>
-		<module>gulimail_common</module>
-	</modules>
+		<module>gulimail-common</module>
+        <module>gulimail-gateway</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
