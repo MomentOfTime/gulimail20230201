@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: gulimail-ware
+  cloud:
+    nacos:
+      config:
+        namespace: 230809ab-81bb-4cf0-bd9a-dd762fda8c4b
+        group: dev
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        extension-configs:
+          - data-id: datasource.yaml
+            group: dev
+            refresh: true
+          - data-id: mybatis-plus.yaml
+            group: dev
+            refresh: true
+          - data-id: other.yaml
+            group: dev
+            refresh: true

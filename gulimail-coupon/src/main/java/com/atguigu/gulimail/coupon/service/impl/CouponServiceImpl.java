@@ -1,5 +1,7 @@
 package com.atguigu.gulimail.coupon.service.impl;
 
+import com.atguigu.common.utils.R;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -25,5 +27,6 @@ public class CouponServiceImpl extends ServiceImpl<CouponDao, CouponEntity> impl
 
         return new PageUtils(page);
     }
+
 
 }
