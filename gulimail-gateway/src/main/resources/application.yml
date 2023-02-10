@@ -10,3 +10,26 @@ spring:
         uri: http://qq.com
         predicates:
         - Query=where, qq
+
+      - id: product_route
+        uri: lb://gulimail-product
+        predicates:
+          - Path=/api/product/**
+        filters:
+          - RewritePath=/api/product/?(?<segment>.*), /product/$\{segment}
+
+      - id: api_route
+        uri: lb://renren-fast
+        predicates:
+          - Path=/api/**
+        filters:
+          - RewritePath=/api/?(?<segment>.*), /renren-fast/$\{segment}
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowCredentials: true
+            allowed-headers: "*"
+            allowed-methods: "*"
+            allowed-origins: "*"
+        add-to-simple-url-handler-mapping: true # 需要加这个
+
